@@ -17,8 +17,8 @@ const char *email = "dlittle@toyatech.net";
 struct timeval tv;
 
 int timeout;
-char *critical_threshold;
-char *warning_threshold;
+char *critical_thresholds;
+char *warning_thresholds;
 char *hostname;
 char *url;
 long sysnr = -1;
