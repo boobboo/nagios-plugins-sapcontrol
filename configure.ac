@@ -1,6 +1,7 @@
 AC_INIT([nagios-plugins-sapcontrol], [1.0], [dlittle@toyatech.net])
 AM_INIT_AUTOMAKE([-Wall -Werror foreign])
 AC_PROG_CC
+AM_PROG_CC_C_O
 
 AC_PATH_PROG([WSDL2H], [wsdl2h])
 AC_PATH_PROG([SOAPCPP2], [soapcpp2])
@@ -19,6 +20,8 @@ if test "x$with_nagios_plugins" = xcheck; then
     np_srcdir="../nagios-plugins"
   fi
 fi
+
+AM_PATH_XML2(2.4.0)
 
 AC_SUBST([np_srcdir])
 AC_SUBST([DEPLIBS])
